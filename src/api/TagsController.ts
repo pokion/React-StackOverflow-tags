@@ -15,7 +15,6 @@ export const fetchTags = async (queryKeys = "page=1&pagesize=10&order=asc&sort=a
               },
             },
         )
-        console.log(data.quota_remaining)
         return data;
     } catch (error) {
       throw error
