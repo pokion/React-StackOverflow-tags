@@ -5,6 +5,7 @@ import {
   numberInputClasses,
 } from '@mui/base/Unstable_NumberInput';
 import { styled } from '@mui/system';
+import { Typography } from '@mui/material';
 
 const NumberInput = React.forwardRef(function CustomNumberInput(
   props: NumberInputProps,
@@ -53,11 +54,13 @@ export default function InputNumberComponent({ valueMax, handleChangeInput }: va
   }
 
   return (
-    <NumberInput
-      placeholder="Type a number…"
-      value={value}
-      onChange={(_event, val) => handleChange(val)}
-    />
+    <>
+      <NumberInput
+        placeholder="Type a number…"
+        value={value}
+        onChange={(_event, val) => handleChange(val)}
+      />
+    </>
   );
 }
 

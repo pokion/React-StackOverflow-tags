@@ -52,7 +52,7 @@ export default function FiltersComponent({ handleMaxChange, queryChange }: paren
     };
 
   return (
-    <Grid container alignItems="center" justifyContent="center">
+    <Grid container alignItems="center" justifyContent="center" spacing={2}>
         <Grid item>
             <InputNumberComponent valueMax={max} handleChangeInput={handleChangeNumberMax} />
         </Grid>
