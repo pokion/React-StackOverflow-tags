@@ -4,7 +4,7 @@ import ITag from '../entities/ITag'
 
 interface TagProps {
     tag: ITag;
-  }
+}
 
 export default function TagCardComponent({ tag }: TagProps) {
   return (

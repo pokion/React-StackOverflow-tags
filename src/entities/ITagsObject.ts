@@ -5,4 +5,5 @@ export default interface TagsObject {
     has_more: boolean;
     quota_max: number;
     quota_remaining: number;
+    total: number
 }

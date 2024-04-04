@@ -32,17 +32,31 @@ const NumberInput = React.forwardRef(function CustomNumberInput(
   );
 });
 
-export default function InputNumberComponent() {
-  const [value, setValue] = React.useState<number | null>(null);
-  const [min, setMin] = React.useState<number | 1>(1)
-  const [max, setMax] = React.useState<number | 100>(100)
+interface value {
+  valueMax: number;
+  handleChangeInput: Function
+}
+
+export default function InputNumberComponent({ valueMax, handleChangeInput }: value) {
+  const [value, setValue] = React.useState<number | null>(valueMax);
+  const [min] = React.useState<number>(1)
+  const [max] = React.useState<number>(100)
+
+  const handleChange = (val: number | null) => {
+    if(val){
+      if(val < min) val = min;
+      if(val > max) val = max;
+    }
+    
+    setValue(val);
+    handleChangeInput(val)
+  }
 
   return (
     <NumberInput
-      aria-label="Demo number input"
       placeholder="Type a number…"
       value={value}
-      onChange={(event, val) => setValue(val)}
+      onChange={(_event, val) => handleChange(val)}
     />
   );
 }
