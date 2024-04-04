@@ -3,12 +3,13 @@ import './App.css'
 import ListComponent from './components/ListComponent'
 import { Container } from '@mui/material'
 
+
 function App() {
 
   return (
     <Container>
-      <ListComponent />
       
+        <ListComponent />
     </Container>
   )
 }

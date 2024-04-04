@@ -15,7 +15,7 @@ export default function FiltersComponent() {
     };
 
   return (
-    <Grid container>
+    <Grid container alignItems="center" justifyContent="center">
         <Grid item>
             <TextField id="outlined-basic" label="Tag name" variant="outlined" />
         </Grid>
