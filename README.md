@@ -3,7 +3,12 @@
 
 A website for viewing tags from stackoverflow build in React with Axios.
 
+# Start
 
+```bash
+  npm i
+  npm start dev
+```
 
 ## Features
 
